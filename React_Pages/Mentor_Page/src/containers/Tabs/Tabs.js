@@ -13,7 +13,7 @@ const styles = theme => ({
     fontSize: 2,
   },
   tabsRoot: {
-    borderBottom: '1px solid #afacac',
+    borderBottom: '1px solid #afacac'
   },
   tabsIndicator: {
     backgroundColor: '#1bc4a8',
@@ -90,21 +90,27 @@ class CustomizedTabs extends React.Component {
           value={value}
           onChange={this.handleChange}
           classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}
+          variant="scrollable"
+          scrollButtons="on"
         >
           <Tab
             disableRipple
             classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
             label="Find a Mentor"
+            className={classes.CenterOnSmall}
+            variant="fullWidth"
           />
           <Tab
             disableRipple
             classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
             label="Sent Requests"
+            className={classes.CenterOnSmall}
           />
           <Tab
             disableRipple
             classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
             label="Received Requests"
+            className={classes.CenterOnSmall}
           />
         </Tabs>
         <SwipeableViews
